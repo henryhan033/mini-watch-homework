@@ -1,0 +1,9 @@
+Git 제출 증빙
+
+저장소: https://github.com/henryhan033/mini-watch-homework
+
+제출 전 이 파일을 참고하여 다음 명령으로 현재 저장소의 실제 커밋을 확인하세요.
+  git log -1 --oneline
+  git status
+
+최종 제출본에는 실제 Git 저장소의 커밋 이력이 함께 존재하는 상태로 제출하세요.

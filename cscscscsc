@@ -1,0 +1,31 @@
+[1mdiff --git a/general/app.py b/general/app.py[m
+[1mindex 996f1cf..4aeb235 100644[m
+[1m--- a/general/app.py[m
+[1m+++ b/general/app.py[m
+[36m@@ -1,6 +1,6 @@[m
+ import json[m
+ import requests[m
+[31m-from flask import Flask, request[m
+[32m+[m[32mfrom flask import Flask, request, render_template[m
+ from werkzeug.security import check_password_hash[m
+ from db import connect_db[m
+ [m
+[36m@@ -25,6 +25,11 @@[m [mdef find_user(username):[m
+         ).fetchone()[m
+ [m
+ [m
+[32m+[m[32m@app.get("/")[m
+[32m+[m[32mdef index():[m
+[32m+[m[32m    return render_template("index.html")[m
+[32m+[m
+[32m+[m
+ @app.post("/auth/login")[m
+ def login():[m
+     data = request.get_json(silent=True)[m
+[36m@@ -73,4 +78,4 @@[m [mdef record_request(response):[m
+ [m
+ [m
+ if __name__ == "__main__":[m
+[31m-    app.run(host="127.0.0.1", port=5100)[m
+[32m+[m[32m    app.run(host="127.0.0.1", port=5100)[m
+\ No newline at end of file[m

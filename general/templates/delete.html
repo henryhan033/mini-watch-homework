@@ -1,0 +1,1 @@
+<!doctype html><html lang="ko"><head><meta charset="utf-8"><title>게시글 삭제 | mini-watch</title><link rel="stylesheet" href="/static/style.css"></head><body><h1>게시글 삭제</h1><p>정말 삭제하시겠습니까?</p><h2>{{ post.title }}</h2><form action="/board/{{ post.id }}/delete" method="post"><button type="submit">삭제 확인</button><a href="/board/{{ post.id }}">취소</a></form></body></html>
